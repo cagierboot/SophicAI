@@ -6,7 +6,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const apiKey = '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';
+
+const apiKey = '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';
 
 app.get('/', (req, res) => {
   res.send('Welcome to the OpenAI API!');
@@ -46,12 +47,11 @@ app.post('/image', async (req, res) => {
     });
     res.json(response.data);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: 'Failed to fetch data' });
   }
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

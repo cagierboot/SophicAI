@@ -67,7 +67,7 @@ const HomeScreen = ({ navigation }) => {
         try {
             setIsLoading(true);
           startPulseAnimation(); // Start the pulse animation
-          const response = await axios.post("https://sophic.herokuapp.com/text", { prompt }, {
+          const response = await axios.post("https://sophicai.herokuapp.com/text", { prompt }, {
             headers: {
               "Content-Type": "application/json",
             },
@@ -111,7 +111,7 @@ const HomeScreen = ({ navigation }) => {
             setIsLoading(true);
           startPulseAnimation(); // Start the pulse animation
           const response = await axios.post(
-            " https://sophic.herokuapp.com/image",
+            " https://sophicai.herokuapp.com/image",
             { prompt },
             {
               headers: {
